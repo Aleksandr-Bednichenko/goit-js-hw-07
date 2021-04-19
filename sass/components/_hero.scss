@@ -1,0 +1,74 @@
+.hero {
+  background-color: #c4c4c4;
+  text-align: center;
+  padding-top: 0;
+
+  &-content {
+    display: inline-block;
+    width: 696px;
+  }
+
+  &-text {
+    display: block;
+
+    padding-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+
+    color: $white-text-color;
+  }
+
+  &-button {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+
+    padding-top: 10px;
+    padding-right: 32px;
+    padding-bottom: 10px;
+    padding-left: 32px;
+
+    cursor: pointer;
+    border: transparent;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+
+    background: $hover-text-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    color: $white-text-color;
+    font-family: inherit;
+    transition-property: background-color, color;
+    transition: background-color $timing-opacity $timing-function,
+      color $timing-opacity $timing-function;
+  }
+
+  &-button:hover,
+  &-button:focus {
+    background-color: $white-background-color;
+    color: $hover-text-color;
+  }
+
+  &-overley {
+    height: 600px;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding-top: 200px;
+    background-image: linear-gradient(
+        to top,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../img/hero.jpg);
+    background-position: center;
+  }
+}

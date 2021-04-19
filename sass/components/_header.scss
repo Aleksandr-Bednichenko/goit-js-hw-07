@@ -1,0 +1,18 @@
+.page-header {
+  position: fixed;
+  width: 100%;
+  z-index: 998;
+  top: 0;
+  left: 0;
+  color: $black-text-color;
+  background-color: $white-background-color;
+
+  & > .conteiner {
+    display: flex;
+    align-items: center;
+  }
+
+  &-border {
+    border-bottom: 1px solid #ececec;
+  }
+}

@@ -1,0 +1,47 @@
+.header-link {
+  display: inline-flex;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  color: $black-text-color;
+
+  padding-top: 32px;
+  padding-bottom: 32px;
+  transition: color $timing-opacity $timing-function;
+
+  &:hover .header-contacts-envelope,
+  &:focus .header-contacts-envelope {
+    fill: $hover-text-color;
+  }
+
+  &:hover,
+  &:focus {
+    color: $hover-text-color;
+  }
+
+  &:hover .header-contacts-smartphone,
+  &:focus .header-contacts-smartphone {
+    fill: $hover-text-color;
+  }
+
+  &-active {
+    color: $hover-text-color;
+  }
+
+  &-active::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: $hover-text-color;
+    color: $hover-text-color;
+    border-radius: 2px;
+  }
+
+  &-contact {
+    color: $grey-text-color;
+  }
+}

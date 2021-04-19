@@ -1,0 +1,56 @@
+.advantages {
+    display: flex;
+    background-color: $white-background-color;
+    padding-top: 94px;
+    padding-bottom: 94px;
+
+    &-elements {
+    display: flex;
+    }
+      
+    &-elements > &-element:not(:last-child) {
+    margin-right: 30px;
+    }
+      
+      
+    &-icon {
+    display: flex;
+    
+    width: 270px;
+    height: 120px;
+    background-color: $button-background-color;
+    margin-bottom: 30px;
+    align-self: center;
+    justify-content: center;
+    padding-top: 25px;
+    padding-right: 100px;
+    padding-bottom: 25px;
+    padding-left: 100px;
+    }
+    
+    &-name {
+    margin-bottom: 10px;
+    }
+    
+    &-name {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    
+    color: $black-text-color;
+    }
+    
+    &-text {
+    font-size: 14px;
+    line-height: 1.71;
+    
+    letter-spacing: 0.03em;
+    
+    color: $grey-text-color;
+    }    
+
+  }
+  
+  

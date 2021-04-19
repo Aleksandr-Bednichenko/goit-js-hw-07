@@ -1,0 +1,6 @@
+.site-nav {
+    display: flex;
+    & > .item:not(:last-child) {
+        margin-right: 50px;
+      }
+    }
