@@ -18,13 +18,9 @@ const images = [
 
 const galeryEl = document.querySelector('#gallery');
 
-const galeryColection = document.createElement('ul');
-
-const res = images.map(image => {
-  galeryColection.insertAdjacentHTML(
-    'beforeend',
+const galeryColection = images.map(
+  image =>
     `<li> <img class="img-galery" src="${image.url}" alt="${image.alt}" /> </li>`,
-  );
-});
-galeryEl.appendChild(galeryColection);
+);
+galeryEl.insertAdjacentHTML('beforeend', galeryColection.join(''));
 console.log(galeryEl);
