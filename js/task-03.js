@@ -16,10 +16,14 @@ const images = [
   },
 ];
 
-const galeryEl = document.querySelector('#gallery')
+const galeryEl = document.querySelector('#gallery');
 console.log(galeryEl);
+const galeryColection = document.createElement('ul');
 
 const res = images.map(image => {
-    galeryEl.insertAdjacentHTML('beforeend', `<li> <img class="img-galery" src="${image.url}" alt="${image.alt}" /> </li>`);
-    
-})
+  galeryColection.insertAdjacentHTML(
+    'beforeend',
+    `<li> <img class="img-galery" src="${image.url}" alt="${image.alt}" /> </li>`,
+  );
+});
+galeryEl.appendChild(galeryColection);
