@@ -5,11 +5,11 @@ const refs = {
   boxesEl: document.querySelector('#boxes'),
 };
 
-const divEls = document.createElement('ul');
+let divEls = document.createElement('ul');
 
 refs.inputEl.addEventListener('input', onInput);
 refs.btnRender.addEventListener('click', createBoxes);
-// refs.boxesEl.addEventListener('click', destroyBoxes);
+refs.btnDestroy.addEventListener('click', destroyBoxes);
 
 function onInput() {
   console.log(refs.inputEl.value);
@@ -17,15 +17,37 @@ function onInput() {
 
 function createBoxes(amount) {
   amount = refs.inputEl.value;
-  const sizeDiv = 20;
-  for (let i = 0; i < amount; i += 10) {
+  if (amount === '') {
+    return console.log('Введите число');
+  }
+  let sizeDiv = 20;
+  for (let i = 0; i < amount; i += 1) {
     const divEl = document.createElement('div');
+    sizeDiv += 10;
     divEl.style.width = `${sizeDiv}px`;
     divEl.style.height = `${sizeDiv}px`;
-    // divEl.style.border = black;
+    divEl.style.margin = '10px';
 
     divEls.appendChild(divEl);
+    random_bg_color(divEl);
   }
   refs.boxesEl.appendChild(divEls);
   console.log(refs.boxesEl);
+}
+
+function destroyBoxes() {
+  console.log('clear');
+  refs.inputEl.value = '';
+  divEls.remove();
+  window.location.reload();
+}
+
+function random_bg_color(elem) {
+  const x = Math.floor(Math.random() * 256);
+  const y = Math.floor(Math.random() * 256);
+  const z = Math.floor(Math.random() * 256);
+  const bgColor = 'rgb(' + x + ',' + y + ',' + z + ')';
+  console.log(bgColor);
+
+  elem.style.background = bgColor;
 }
