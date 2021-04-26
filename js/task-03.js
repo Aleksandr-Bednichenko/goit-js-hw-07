@@ -17,7 +17,7 @@ const images = [
 ];
 
 const galeryEl = document.querySelector('#gallery');
-console.log(galeryEl);
+
 const galeryColection = document.createElement('ul');
 
 const res = images.map(image => {
@@ -27,3 +27,4 @@ const res = images.map(image => {
   );
 });
 galeryEl.appendChild(galeryColection);
+console.log(galeryEl);
